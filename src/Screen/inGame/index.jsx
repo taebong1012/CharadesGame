@@ -68,15 +68,26 @@ const Ingame = () => {
     }
   }, [curIndex]);
 
+  useEffect(() => {
+    sessionStorage.setItem("banswer", JSON.stringify(answer));
+    sessionStorage.setItem("bresult", JSON.stringify(result));
+  }, [isFinished]);
+
   const bTurn = () => {
     setIsStart(false);
     setMin(parseInt(sessionStorage.getItem("min")));
     setSec(parseInt(sessionStorage.getItem("sec")));
 
+    sessionStorage.setItem("aanswer", JSON.stringify(answer));
+    sessionStorage.setItem("aresult", JSON.stringify(result));
+
     setCurTeam("B");
     const bTexts = JSON.parse(sessionStorage.getItem("b"));
     setTexts(bTexts);
     setCurIndex(0);
+
+    setAnswer([]);
+    setResult([]);
   };
 
   const handleChangeIsStart = () => {
@@ -94,15 +105,21 @@ const Ingame = () => {
     setRandomNum((prevRandom) => [...prevRandom, ...numbers.slice(0)]);
   };
 
+  const [answer, setAnswer] = useState([]);
+  const [result, setResult] = useState([]);
+
   const indexIncrease = () => {
+    setAnswer((prevAnswer) => [...prevAnswer, texts[randomNum[curIndex]]]);
     setCurIndex(curIndex + 1);
   };
 
   const handleOnClickAnswer = () => {
+    setResult((prevResult) => [...prevResult, "O"]);
     indexIncrease();
   };
 
   const handleOnClickPass = () => {
+    setResult((prevResult) => [...prevResult, "X"]);
     indexIncrease();
   };
 
