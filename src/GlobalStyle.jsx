@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -31,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.2;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 `;
 
