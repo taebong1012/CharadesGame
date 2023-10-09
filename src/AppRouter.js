@@ -4,6 +4,7 @@ import Seta from "./Screen/setGame/setA";
 import Setb from "./Screen/setGame/setB";
 import Ingame from "./Screen/inGame";
 import SetTime from "./Screen/setGame/setTime";
+import Result from "./Screen/Result";
 
 const AppRouter = () => {
   return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
         <Route path="/setb" element={<Setb />} />
         <Route path="/settime" element={<SetTime />} />
         <Route path="/ingame" element={<Ingame />} />
+        <Route path="/result" element={<Result />} />
       </Routes>
     </BrowserRouter>
   );
