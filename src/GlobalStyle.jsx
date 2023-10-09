@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "LINE100", sans-serif;
-    line-height: 1.5;
+    line-height: 1.2;
     display: flex;
     justify-content: center;
   }
