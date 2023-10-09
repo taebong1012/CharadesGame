@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Btn, BtnGroup, BtnRow, Title } from "./style";
 import { useNavigate } from "react-router-dom";
 
@@ -17,6 +17,16 @@ const Main = () => {
     navigate("/settime");
   };
 
+  const [isReady, setIsReady] = useState(false);
+  useEffect(() => {
+    const aTexts = sessionStorage.getItem("a");
+    const bTexts = sessionStorage.getItem("b");
+
+    if (aTexts && bTexts) {
+      setIsReady(true);
+    }
+  }, []);
+
   return (
     <>
       <Title>
@@ -26,14 +36,32 @@ const Main = () => {
       </Title>
       <BtnGroup>
         <BtnRow>
-          <Btn color="#e29393" width="120px" height="120px" onClick={goToSetA}>
+          <Btn
+            disabled={false}
+            color="#FFD7B2"
+            width="120px"
+            height="120px"
+            onClick={goToSetA}
+          >
             A팀
           </Btn>
-          <Btn color="#6e92d8" width="120px" height="120px" onClick={goToSetB}>
+          <Btn
+            disabled={false}
+            color="#FFD7B2"
+            width="120px"
+            height="120px"
+            onClick={goToSetB}
+          >
             B팀
           </Btn>
         </BtnRow>
-        <Btn color="#a4a4a4" width="260px" height="120px" onClick={goToSetTime}>
+        <Btn
+          disabled={!isReady}
+          color="#FF8A00"
+          width="260px"
+          height="120px"
+          onClick={goToSetTime}
+        >
           게임 시작
         </Btn>
       </BtnGroup>

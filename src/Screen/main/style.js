@@ -22,7 +22,7 @@ export const BtnRow = styled.div`
 `;
 
 export const Btn = styled.button`
-  background-color: ${(props) => props.color};
+  background-color: ${(props) => (props.disabled ? "#ADB3BA" : props.color)};
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   margin: 10px;
@@ -31,7 +31,6 @@ export const Btn = styled.button`
   justify-content: center;
   align-items: center;
   font-family: "LINE400";
-  color: white;
   font-size: 1.25rem;
   filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.25));
   border: 2px solid transparent;

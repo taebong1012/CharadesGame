@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Input, InputGroup, InputRow, Num, SubmitBtn } from "./style";
+import { useNavigate } from "react-router-dom";
 
 const InputForm = (props) => {
   const [inputValues, setInputValues] = useState(Array(20).fill(""));
@@ -26,10 +27,12 @@ const InputForm = (props) => {
     setInputValues(newInputValues);
   };
 
+  const navigate = useNavigate();
   const handleSubmit = () => {
     if (inputValues.every((value) => value !== "")) {
       sessionStorage.setItem(props.team, JSON.stringify(inputValues));
       alert("저장되었습니다.");
+      navigate("/");
     } else {
       alert("모든 입력란을 채워주세요.");
     }
