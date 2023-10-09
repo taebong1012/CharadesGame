@@ -1,5 +1,5 @@
 import React from "react";
-import { Blank, Btn, BtnGroup, BtnRow, Title } from "./style";
+import { Btn, BtnGroup, BtnRow, Title } from "./style";
 import { useNavigate } from "react-router-dom";
 
 const Main = () => {
@@ -13,8 +13,8 @@ const Main = () => {
     navigate("/setb");
   };
 
-  const goToInGame = () => {
-    navigate("/ingame");
+  const goToSetTime = () => {
+    navigate("/settime");
   };
 
   return (
@@ -33,7 +33,7 @@ const Main = () => {
             B팀
           </Btn>
         </BtnRow>
-        <Btn color="#a4a4a4" width="260px" height="120px" onClick={goToInGame}>
+        <Btn color="#a4a4a4" width="260px" height="120px" onClick={goToSetTime}>
           게임 시작
         </Btn>
       </BtnGroup>

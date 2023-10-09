@@ -3,6 +3,7 @@ import Main from "./Screen/main";
 import Seta from "./Screen/setGame/setA";
 import Setb from "./Screen/setGame/setB";
 import Ingame from "./Screen/inGame";
+import SetTime from "./Screen/setGame/setTime";
 
 const AppRouter = () => {
   return (
@@ -11,6 +12,7 @@ const AppRouter = () => {
         <Route path="/" element={<Main />} />
         <Route path="/seta" element={<Seta />} />
         <Route path="/setb" element={<Setb />} />
+        <Route path="/settime" element={<SetTime />} />
         <Route path="/ingame" element={<Ingame />} />
       </Routes>
     </BrowserRouter>
