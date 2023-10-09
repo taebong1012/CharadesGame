@@ -7,7 +7,7 @@ const Nav = () => {
   const navigate = useNavigate();
 
   const goMain = () => {
-    navigate("/");
+    navigate(-1);
   };
 
   return (

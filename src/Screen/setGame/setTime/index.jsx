@@ -36,7 +36,7 @@ const SetTime = () => {
   const handleClickNext = () => {
     sessionStorage.setItem("min", JSON.stringify(selectedMin));
     sessionStorage.setItem("sec", JSON.stringify(selectedSec));
-    navigate("/ingame");
+    navigate("/setpass");
   };
 
   return (
