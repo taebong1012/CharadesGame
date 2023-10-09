@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Input,
-  InputGroup,
-  InputRow,
-  Num,
-  SubmitBtn,
-} from "../../Screen/setGame/setA/style";
+import { Input, InputGroup, InputRow, Num, SubmitBtn } from "./style";
 
 const InputForm = (props) => {
   const [inputValues, setInputValues] = useState(Array(20).fill(""));
