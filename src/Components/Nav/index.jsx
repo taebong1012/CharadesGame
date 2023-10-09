@@ -6,22 +6,27 @@ import { useNavigate } from "react-router-dom";
 const Nav = (props) => {
   const navigate = useNavigate();
 
-  const goMain = () => {
+  const goPrev = () => {
     navigate(-1);
   };
 
   const doInit = () => {
-    
-    sessionStorage.clear(props.team);
+    const userConfirmed = window.confirm(
+      "이 작업은 되돌릴 수 없습니다. 초기화 하시겠습니까?"
+    );
+    if (userConfirmed) {
+      sessionStorage.removeItem(props.team);
+      window.location.reload();
+    }
   };
 
   return (
     <Frame>
-      <IconDiv onClick={goMain}>
+      <IconDiv onClick={goPrev}>
         <PrevIco width={"80%"} height={"60%"} />
       </IconDiv>
       <IconDiv onClick={props.team ? doInit : null}>
-        <Text onClick={doInit}>{props.team ? "초기화" : ""}</Text>
+        <Text>{props.team ? "초기화" : ""}</Text>
       </IconDiv>
     </Frame>
   );
