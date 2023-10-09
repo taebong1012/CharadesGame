@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Charades Game",
+  "name": "몸으로 말해요",
   "icons": [
     {
       "src": "favicon.ico",
