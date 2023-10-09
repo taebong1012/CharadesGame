@@ -34,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
   }
+
+button {
+  font-size: 1rem;
+}
 `;
 
 export default GlobalStyle;
