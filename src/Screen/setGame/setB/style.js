@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
-export const Title = styled.div`
-  font-family: "LINE700";
-  margin: 2.5rem 0;
-  font-size: 1.5rem;
-  text-align: center;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+`;
+
+export const Content = styled.div`
+  padding: 0 1.875rem;
 `;
