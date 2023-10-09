@@ -22,6 +22,7 @@ const Ingame = () => {
   const [isFinished, setIsFinished] = useState(false);
   const [randomNum, setRandomNum] = useState([]);
   const [curIndex, setCurIndex] = useState(0);
+  const [pass, setPass] = useState(sessionStorage.getItem("pass"));
 
   useEffect(() => {
     setMin(parseInt(sessionStorage.getItem("min")));
@@ -88,6 +89,7 @@ const Ingame = () => {
 
     setAnswer([]);
     setResult([]);
+    setPass(sessionStorage.getItem("pass"));
   };
 
   const handleChangeIsStart = () => {
@@ -121,6 +123,7 @@ const Ingame = () => {
   const handleOnClickPass = () => {
     setResult((prevResult) => [...prevResult, "X"]);
     indexIncrease();
+    setPass(pass - 1);
   };
 
   const navigate = useNavigate();
@@ -175,8 +178,14 @@ const Ingame = () => {
         <Btn onClick={handleOnClickAnswer} color="#FF8A00" disabled={!isStart}>
           정답
         </Btn>
-        <Btn onClick={handleOnClickPass} color="#FEF0EE" disabled={!isStart}>
+        <Btn
+          onClick={handleOnClickPass}
+          color="#FEF0EE"
+          disabled={!isStart || pass === 0}
+        >
           Pass
+          <br />
+          {pass}회 가능
         </Btn>
       </ButtonDiv>
     </Container>
