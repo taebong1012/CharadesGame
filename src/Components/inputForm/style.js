@@ -17,11 +17,12 @@ export const InputGroup = styled.div`
 export const InputRow = styled.div`
   display: flex;
   margin: 8px 0;
+  width: 100%;
 `;
 
 export const Num = styled.div`
   margin-right: 0.5rem;
-  width: 20px;
+  width: 10%;
   height: 2rem;
   font-size: 1.125rem;
   display: flex;
@@ -39,6 +40,7 @@ export const Input = styled.input`
   border: none;
   background-color: #f2f3f5;
   border-radius: 10px;
+  width: 90%;
 
   &:focus {
     outline: none;
@@ -53,4 +55,5 @@ export const SubmitBtn = styled.button`
   height: 3rem;
   border: none;
   border-radius: 10px;
+  width: 100%;
 `;
