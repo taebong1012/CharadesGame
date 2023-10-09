@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  padding: 0 1.25rem;
+  padding: 0 1.875rem;
 `;
 
 export const BlankWidth = styled.div`

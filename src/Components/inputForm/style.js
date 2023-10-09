@@ -10,6 +10,8 @@ export const Title = styled.div`
 export const InputGroup = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const InputRow = styled.div`

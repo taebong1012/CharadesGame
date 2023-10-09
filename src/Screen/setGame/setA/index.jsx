@@ -1,13 +1,18 @@
 import React from "react";
-import { Title } from "./style";
 import InputForm from "../../../Components/inputForm";
+import Nav from "../../../Components/Nav";
+import { Container, Content } from "./style";
+import Title from "../../../Components/Title";
 
 const Seta = () => {
   return (
-    <>
-      <Title>A팀 작성 단어</Title>
-      <InputForm team="a" />
-    </>
+    <Container>
+      <Nav team="a" />
+      <Content>
+        <Title title="A팀 제시어" caption="B팀을 공격할 단어를 입력하세요." />
+        <InputForm team="a" />
+      </Content>
+    </Container>
   );
 };
 
