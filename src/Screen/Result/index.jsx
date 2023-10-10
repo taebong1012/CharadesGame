@@ -99,7 +99,7 @@ const Result = () => {
 
   return (
     <Container>
-      <Nav />
+      <Nav gomain={true} />
       <Content>
         <Title
           title="게임 결과"

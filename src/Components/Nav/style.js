@@ -10,7 +10,7 @@ export const Frame = styled.div`
   margin-top: 0.625rem;
 `;
 
-export const IconDiv = styled.div`
+export const IconDiv = styled.button`
   height: 2rem;
   width: 2.5;
   display: flex;
@@ -18,6 +18,12 @@ export const IconDiv = styled.div`
   align-items: center;
   margin: 0 15px;
   border-radius: 5px;
+  background-color: transparent;
+  border: none;
+
+  &:active {
+    background-color: #fef0ee;
+  }
 `;
 
 export const Text = styled.p`
