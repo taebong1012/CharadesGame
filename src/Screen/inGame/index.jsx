@@ -154,7 +154,7 @@ const Ingame = () => {
         );
       }
     } else {
-      console.log(texts[randomNum[curIndex]]).length;
+      console.log(texts[randomNum[curIndex]]);
       console.log(texts[randomNum[curIndex]].length);
       return (
         <Inner>
