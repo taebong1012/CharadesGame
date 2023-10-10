@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
 
 button {
   font-size: 1rem;
+  color: black;
 }
 `;
 
