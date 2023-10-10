@@ -154,6 +154,8 @@ const Ingame = () => {
         );
       }
     } else {
+      console.log(texts[randomNum[curIndex]]).length;
+      console.log(texts[randomNum[curIndex]].length);
       return (
         <Inner>
           <Word length={texts[randomNum[curIndex]].length}>
