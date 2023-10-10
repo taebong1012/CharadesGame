@@ -35,7 +35,7 @@ const Nav = (props) => {
 
   return (
     <Frame>
-      <IconDiv onClick={goPrev}>
+      <IconDiv onClick={goPrev} width="4rem">
         <Icon />
       </IconDiv>
       <IconDiv onClick={props.team ? doInit : null}>

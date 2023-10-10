@@ -12,11 +12,11 @@ export const Frame = styled.div`
 
 export const IconDiv = styled.button`
   height: 2rem;
-  width: 2.5;
+  width: ${(props) => (props.width ? props.width : "none")};
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 15px;
+  margin: 0 1px;
   border-radius: 5px;
   background-color: transparent;
   border: none;

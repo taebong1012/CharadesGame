@@ -39,6 +39,10 @@ button {
   font-size: 1rem;
   color: black;
 }
+
+select {
+  color: black;
+}
 `;
 
 export default GlobalStyle;
