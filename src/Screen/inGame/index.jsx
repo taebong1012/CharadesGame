@@ -155,7 +155,13 @@ const Ingame = () => {
       }
     } else {
       if (texts[randomNum[curIndex]] === undefined) {
-        goToResult();
+        if (curTeam === "B") {
+          setIsFinished(true);
+        } else {
+          setIsStart(false);
+          setCurIndex(0);
+          setCurTeam("B");
+        }
       } else {
         return (
           <Inner>
