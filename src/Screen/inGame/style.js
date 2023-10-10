@@ -9,6 +9,19 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Text = styled.p`
+  margin-bottom: 0.25rem;
+  font-size: 1.6rem;
+  font-family: "LINE400";
+`;
+
 export const TimerDiv = styled.div`
   display: flex;
   justify-content: center;
@@ -34,7 +47,7 @@ export const Inner = styled.div`
   font-size: 10rem;
 `;
 
-export const Text = styled.p`
+export const Word = styled.p`
   white-space: nowrap;
   overflow: hidden;
   font-size: calc((100vw) / ${(props) => props.length});

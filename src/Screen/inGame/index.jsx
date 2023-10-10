@@ -4,10 +4,11 @@ import {
   TimerDiv,
   Time,
   Inner,
-  Blank,
   ButtonDiv,
-  Text,
+  Word,
   Btn,
+  Column,
+  Text,
 } from "./style";
 import { ReactComponent as Timer } from "../../Sources/svg/timer.svg";
 import { ReactComponent as TimerStart } from "../../Sources/svg/timerstart.svg";
@@ -155,9 +156,9 @@ const Ingame = () => {
     } else {
       return (
         <Inner>
-          <Text length={texts[randomNum[curIndex]].length}>
+          <Word length={texts[randomNum[curIndex]].length}>
             {texts[randomNum[curIndex]]}
-          </Text>
+          </Word>
         </Inner>
       );
     }
@@ -165,12 +166,15 @@ const Ingame = () => {
 
   return (
     <Container>
-      <TimerDiv>
-        <Timer width={"32px"} height={"32px"} />
-        <Time>
-          {min.toString().padStart(2, "0")}:{sec.toString().padStart(2, "0")}
-        </Time>
-      </TimerDiv>
+      <Column>
+        <Text>{curTeam}팀</Text>
+        <TimerDiv>
+          <Timer width={"32px"} height={"32px"} />
+          <Time>
+            {min.toString().padStart(2, "0")}:{sec.toString().padStart(2, "0")}
+          </Time>
+        </TimerDiv>
+      </Column>
 
       <Content />
 
