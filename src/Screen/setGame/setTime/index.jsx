@@ -34,8 +34,8 @@ const SetTime = () => {
   const navigate = useNavigate();
 
   const handleClickNext = () => {
-    sessionStorage.setItem("min", JSON.stringify(selectedMin));
-    sessionStorage.setItem("sec", JSON.stringify(selectedSec));
+    sessionStorage.setItem("min", selectedMin);
+    sessionStorage.setItem("sec", selectedSec);
     navigate("/setpass");
   };
 
