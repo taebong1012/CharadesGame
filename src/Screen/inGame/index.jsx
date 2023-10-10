@@ -156,13 +156,17 @@ const Ingame = () => {
     } else {
       console.log(texts[randomNum[curIndex]]);
       console.log(texts[randomNum[curIndex]].length);
-      return (
-        <Inner>
-          <Word length={texts[randomNum[curIndex]].length}>
-            {texts[randomNum[curIndex]]}
-          </Word>
-        </Inner>
-      );
+      if (texts[randomNum[curIndex]] === undefined) {
+        goToResult;
+      } else {
+        return (
+          <Inner>
+            <Word length={texts[randomNum[curIndex]].length}>
+              {texts[randomNum[curIndex]]}
+            </Word>
+          </Inner>
+        );
+      }
     }
   };
 
