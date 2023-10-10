@@ -40,11 +40,11 @@ export const TimeArea = styled.div`
 
 export const Btn = styled.button`
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   background-color: #ff8a00;
   color: white;
   height: 3rem;
-  width: calc(100% - 2.5rem);
+  width: calc(100% - 3.75rem);
   border: none;
   border-radius: 10px;
   position: fixed;

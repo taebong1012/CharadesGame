@@ -49,7 +49,7 @@ export const Input = styled.input`
 
 export const SubmitBtn = styled.button`
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   background-color: ${(props) => (props.disabled ? "#ADB3BA" : "#ff8a00")};
   color: white;
   height: 3rem;
