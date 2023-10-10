@@ -154,10 +154,8 @@ const Ingame = () => {
         );
       }
     } else {
-      console.log(texts[randomNum[curIndex]]);
-      console.log(texts[randomNum[curIndex]].length);
       if (texts[randomNum[curIndex]] === undefined) {
-        goToResult;
+        goToResult();
       } else {
         return (
           <Inner>
