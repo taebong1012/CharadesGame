@@ -62,7 +62,7 @@ const Main = () => {
           height="120px"
           onClick={goToSetTime}
         >
-          게임 시작
+          {isReady ? "게임 시작" : "단어 입력을 완료해주세요."}
         </Btn>
       </BtnGroup>
     </>
